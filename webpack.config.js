@@ -6,6 +6,7 @@ module.exports ={
     plugins:[
                 new HtmlWebpackPlugin({
                     template:"./src/js/template/main.html",
+                    inject:false,
                     filename:path.resolve(__dirname, 'dist/templates/layouts/user.html')
                 }),
                 ],

@@ -3,11 +3,19 @@
 <head>
     {% load static %}
     <meta charset="UTF-8">
-    <title>JNBAA</title>
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
 </head>
 <body>
-    <h1>HEY</h1>
-    <button class="btn btn-dark">Hey To Everyone</button>
-    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+    <script type="text/javascript" src="{% static '<%= htmlWebpackPlugin.files.js[0].split('/').slice(-2).join('/') %>' %}"></script>
+
 </body>
 </html>

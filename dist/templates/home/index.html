@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <title>JNBAA</title>
-</head>
-<body>
+{% extends "layouts/user.html"%}
+
+{% block title %}
+    HOME | JNVBAA
+{% endblock %}
+
+{% block content %}
     <h1>HEY</h1>
-    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
-</body>
-</html>
+    <button class="btn btn-dark">Hey To Everyone</button>
+{% endblock %}
