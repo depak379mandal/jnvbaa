@@ -1,0 +1,60 @@
+{% extends "layouts/user.html" %}
+
+{% block title %}
+    User | Register
+{% endblock %}
+
+{% block content %}
+
+<div class="w-full max-w-xs mt-20 mx-auto">
+  <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" method="post">
+
+    {% csrf_token %}
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="firstname">
+        First Name
+      </label>
+      {{form.first_name}}
+    </div>
+
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="lastname">
+        Last Name
+      </label>
+      {{form.last_name}}
+    </div>
+
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+        Email
+      </label>
+      {{form.email}}
+    </div>
+
+    <div class="mb-6">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+        Password
+      </label>
+      {{form.password1}}
+    </div>
+
+    <div class="mb-6">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+        Comfirm Password
+      </label>
+      {{form.password2}}
+    </div>
+    <div class="flex items-center justify-between">
+      <button class="bg-blue-500 hover:bg-white text-white hover:text-blue-500 border-blue-500 font-bold py-2 px-3 rounded focus:outline-none focus:shadow-outline" type="submit">
+        Sign Up
+      </button>
+      <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="/login">
+        Log In
+      </a>
+    </div>
+  </form>
+  <p class="text-center text-gray-500 text-xs">
+    &copy;2020 Deepak Mandal All rights reserved.
+  </p>
+</div>
+{% endblock %}
